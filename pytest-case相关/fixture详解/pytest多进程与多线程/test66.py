@@ -56,11 +56,13 @@ def testcase_03():
     time.sleep(2)
     print("这里是testcase_03")
 
-# pytest-xdist 运行方式
+
+# #pytest-xdist 运行方式
 # if __name__ == '__main__':
 #     pytest.main(['-s', __file__, '-n=4'])
 
 # pytest-xdist 跟 pytest-parallel 一起使用
 
 if __name__ == '__main__':
-    pytest.main(['-s',__file__,'-v','--workers=1','--tests-per-worker=1'])
+    # pytest.main(['-s',  '--workers=2', '--tests-per-worker=4', __file__])
+    pytest.main(['-s', '--workers=1', '--tests-per-worker=1', __file__])
