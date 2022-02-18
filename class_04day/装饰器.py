@@ -31,8 +31,9 @@ def login(func):
     return fun
 
 
-@login
+@login # @login: 语法糖 --> index = login(index)
 def index():
     print("这个是网站的首页")
+
 
 index()
