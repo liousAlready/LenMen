@@ -16,7 +16,8 @@
 # print(True and 10 > 3)
 # print(True and 10 > 3 and 10 and 0)  # 条件全为真，最终结果才为True
 
-# print(0 and 10 > 3 and 0 and 1 > 3 and 4 == 4 and 3 != 3)  # 偷懒原则
+print(0 and 10 > 3 and 0 and 1 > 3 and 4 == 4 and 3 != 3)  # 偷懒原则
+print(1 > 0 and 10 > 3 or 0 and 1 > 3 and 4 == 4 and 3 != 3)  # 偷懒原则
 
 # # or 逻辑或 用来连接左右条件的，只要其中一个条件满足为真，最终结果就为真
 # # 两个条件都为false的情况下，最终结果就是假
