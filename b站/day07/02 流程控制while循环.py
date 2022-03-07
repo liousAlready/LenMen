@@ -124,7 +124,70 @@ while True:
 #         print("账号或密码错误")
 #     print("===end===")
 
-while tag:
+# while tag:
+#     name = input("请输入你的账号:")
+#     pwd = input("请输入你的密码:")
+#     if name == username and pwd == password:
+#         print("登录成功")
+#         while tag:
+#             cmd = input("输入命令的编号>: ")
+#             if cmd == "q":
+#                 tag = False
+#                 print("当前正在结束操作")
+#             else:
+#                 print("命令{x}正在运行...".format(x=cmd))
+#     else:
+#         print("账号或密码错误")
+
+# 8. while + continue 结束本次循环，直接进入下一次
+# 强调: 在continue之后添加统计代码毫无意义,因为永远无法运行
+
+# count = 0
+# while count < 6:
+#     if count == 4:
+#         count += 1
+#         continue
+#     print(count)
+#     count += 1
+
+
+# # 9. while + else
+# count = 0
+# while count < 6:
+#     if count == 4:
+#         break
+#     print(count)
+#     count += 1
+# else:
+#     print("else包含的代码会在while循环结束后,"
+#           "并且while循环是没有被break打断正常结束的,才不会运行")
+
+# 应用案例
+
+# # 案例一：
+# count = 0
+# while tag:
+#     if count ==3:
+#         print("输错超过三次，退出循环")
+#         break
+#     name = input("请输入你的账号:")
+#     pwd = input("请输入你的密码:")
+#     if name == username and pwd == password:
+#         print("登录成功")
+#         while tag:
+#             cmd = input("输入命令的编号>: ")
+#             if cmd == "q":
+#                 tag = False
+#                 print("当前正在结束操作")
+#             else:
+#                 print("命令{x}正在运行...".format(x=cmd))
+#     else:
+#         print("账号或密码错误")
+#         count += 1
+
+# 优化
+count = 0
+while count < 3:
     name = input("请输入你的账号:")
     pwd = input("请输入你的密码:")
     if name == username and pwd == password:
@@ -136,7 +199,9 @@ while tag:
                 print("当前正在结束操作")
             else:
                 print("命令{x}正在运行...".format(x=cmd))
+        break
     else:
         print("账号或密码错误")
-
-# 8. while + continue 结束本次循环，直接进入下一次
+        count += 1
+else:
+    print("输错3次，退出")
