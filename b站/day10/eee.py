@@ -1,0 +1,7 @@
+# coding:gbk
+
+x='ио'
+# print([x])
+
+# y=u'ио'
+# print([y])
